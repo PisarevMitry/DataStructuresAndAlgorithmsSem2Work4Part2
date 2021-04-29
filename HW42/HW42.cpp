@@ -10,7 +10,7 @@ long long M, C;
 //функция сортировки методом простого обмена
 //Предусловие: на вход поступает указатель на ненулевой массив, количество элементов массива
 //Постусловие: функция перемещает элементы массива
-void exchangeSort(long*& array, long N) {
+void exchangeSortAiv(long*& array, long N) {
 	bool swapped;
 	C++;
 	for (long i = 0; i < N - 1; i++) {
@@ -32,6 +32,26 @@ void exchangeSort(long*& array, long N) {
 		}
 	}
 }
+
+//функция сортировки методом простого обмена
+//Предусловие: на вход поступает указатель на ненулевой массив, количество элементов массива
+//Постусловие: функция перемещает элементы массива
+void exchangeSort(long*& array, long N) {
+	C++;
+	for (long i = 0; i < N - 1; i++) {
+		C++;
+		C++;
+		for (long j = 0; j < N - i - 1; j++) {
+			C++;
+			C++;
+			if (array[j] > array[j + 1]) {
+				M++;
+				swap(array[j], array[j + 1]);
+			}
+		}
+	}
+}
+
 
 //Функция заполнения массива случайными числами
 void filling_array(long*& array, long N) {
